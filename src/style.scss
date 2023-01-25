@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'main';
+  src: url('./font.ttf');
+}
+
+@keyframes animation {
+  0% {
+    translate: 0 -100%;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+
+  }
+}
+
+* {
+  font-family: 'main';
+  transition: .3s ease;
+}
+
+.app {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 10vh;
+  margin: 10%;
+
+  .card {
+    border-radius: 5%;
+    padding: 8%;
+    animation: 1s animation;
+    border: 2px solid white;
+    background: rgb(228, 252, 251);
+
+
+    &:hover {
+
+      filter: drop-shadow(0 0 30px #23a5d591);
+      scale: 1.1;
+    }
+
+
+    filter: drop-shadow(0 0 30px #23a6d5);
+
+    li {
+      text-align: left;
+      list-style-type: none;
+
+      label {
+        color: rgba(0, 0, 0, 0.678);
+        cursor: pointer;
+        width: 100%;
+        margin: 5%;
+
+        &:hover {
+          color: rgb(0, 0, 0);
+
+        }
+      }
+
+
+      input {
+        display: none;
+      }
+
+
+    }
+  }
+
+
+}
